@@ -2,7 +2,7 @@ const { app, BrowserWindow } = require("electron");
 let win; 
 function createWindow() { 
 	win = new BrowserWindow({ width: 730, height: 1020, resizable: false, autoHideMenuBar: true});
-	win.loadURL(`file://C:/Users/kiyos/electron_apl/gaihex/index.html`); 
+	win.loadURL(`file://${__dirname}/index.html`); 
 	win.on("closed", () => { win = null; }); 
 } 
 app.on("ready", createWindow); 
