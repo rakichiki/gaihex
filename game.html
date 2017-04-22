@@ -1,0 +1,175 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+		
+    <!-- <script src="cordova.js"></script> -->
+    <script src="js/gg_data.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_main_sub.js"></script>
+    <script src="js/gg_main_sub2.js"></script>
+    <script src="js/gg_controller.js"></script>
+    <script src="js/gg_controller_sub.js"></script>
+    <script src="js/gg_controller_cpu.js"></script>
+    <script src="js/gg_view.js"></script>
+    <script src="js/gg_animation.js"></script>
+    <script src="js/gg_animation_etc.js"></script>
+    <script src="js/gg_animation_sub.js"></script>
+    <script src="js/gg_parts.js"></script>
+    <script src="js/gg_data_route.js"></script>	
+    <!--<script src="js/gg_data_route_min.js"></script>	-->
+
+    <script src="js/gg_parts_data.js"></script>
+    <script src="js/gg_parts_attack.js"></script>
+    <script src="js/gg_parts_attack_sub.js"></script>
+    <script src="js/gg_parts_animation.js"></script>
+    <script src="js/gg_event.js"></script>
+    <script src="js/gg_controller_user.js"></script>
+    <script src="js/gg_controller_user_sub.js"></script>
+    <script src="js/gg_map.js"></script>
+    <script src="js/gg_menu.js"></script>
+    <script src="js/gg_menu_after.js"></script>
+    <script src="js/gg_menu_view.js"></script>
+    <script src="js/gg_graph.js"></script>
+    <script src="js/gg_storage.js"></script>
+    <!--<script src="js/gg_audio.js"></script>-->
+    <script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <!--<script src="cordova.js"></script>-->
+
+<!--    <script src="js/gs_parts_route_cal.js"></script>-->
+	    
+</head>
+<body onSelectStart='return false'>
+	<div>
+	<div id='canvas_div' width='542px' height='620px'>
+		<div id='div_canvas_0' style='margin:0px;padding:0px;position: relative; top: 0px; left:0px;z-index: 1;'>
+			<canvas id='canvas_0' width='640px' height='780px'></canvas>
+		</div>
+	</div>
+	<div id='destinetion' class='destinetion' style='text-align:center;'>
+		<span class='win_lost_destinetion'><button id='back_top' onClick='gg.menu.back_top()' class='leftsidebutton white' style=''><i class="fa fa-caret-square-o-left"></i></button>
+</span>
+	</div>
+	
+
+	<div　class='leftsidebutton white' style='text-align:center;'>
+		<table id='info_table' class='table_01'　style='display:none;opacity:0;'>
+			<tr>
+				<td id='mode_info'                         class='table_string table_name menu_info'>X</td>
+				<td id='unit_info'                         class='table_number table_sum_hitpoint menu_info'><i class='fa fa-user'></i>&nbsp;00</td>
+
+				<td rowspan='2' id='round_info'            class='table_number table_round menu_info'><i class='fa fa-map-signs'></i>&nbsp;--/--</td>
+				<td rowspan='2' colspan='2' id='turn_info' class='table_number table_turn menu_info'><i class='fa fa-hourglass'></i>&nbsp;000/000</td>
+
+				<td rowspan='1' id='hande_info'            class='table_string table_hitpoint1 menu_info'><i class='fa fa-shield'></i>&nbsp;00</td>
+				<td rowspan='1' id='game_long_info'        class='table_string table_hitpoint2 menu_info'><i class='fa fa-clock-o'></i>&nbsp;XXX</td>
+				<td rowspan='1' id='lost_info'             class='table_string table_lost_turn menu_info'><i class='fa fa-hourglass-end'></i>&nbsp;000</td>
+
+				<!--<td id='end_turn' class='table_number table_unit menu_info'>XX</td>-->
+
+				
+			</tr>
+
+			<tr>
+				<td id='turn_start_army' class='table_string  menu_info'><i class="fa fa-flag"></i></td>
+				<td id='win_info'        class='table_number table_sum_hitpoint menu_info'><i class='fa fa-heart'></i>&nbsp;0000</td>
+
+				<td rowspan='1' id='win_or_lost'     class='table_string  menu_info'><i class='fa fa-level-up'></i>&nbsp;XXXX</td>
+				<td rowspan='1' id='map_info'        class='table_string  menu_info'><i class='fa fa-globe'></i>&nbsp;XXX</td>
+				<td rowspan='1' id='unit_diff_info'  class='table_string  menu_info'><i class='fa fa-gavel'></i>&nbsp;00</td>
+				<!--<td rowspan='2' id='win_info'        class='table_number table_sum_hitpoint menu_info'>XXXX</td>-->
+
+				<!--<td id='round_info' class='table_number table_round menu_info'>XXXX</td>
+				<td id='turn_info' class='table_number table_turn menu_info'>XX</td>-->
+
+				
+			</tr>
+			<tr id='army_0' style=''>
+				<td id='army_0_name'                   class='table_string  menu_info'><i class="fa fa-flag"></i></td>
+				<td id='army_0_sum_hitpoint'           class='table_number  menu_info'><i class='fa fa-heart'></i>&nbsp;0000</td>
+				<td colspan='1' id='army_0_area_point' class='table_number  menu_info'><i class='fa fa-university'></i>&nbsp;0000</td>
+				<td id='army_0_castle'                 class='table_number  menu_info'><i class='fa fa-fort-awesome'></i>&nbsp;00</td>
+				<td id='army_0_level_up'                 class='table_number  menu_info'><i class="fa fa-level-up" ></i>&nbsp;0</td>
+
+				<td colspan='3' id='army_0_units'      class='table_string  menu_info'><i class='fa fa-users'></i>&nbsp;00/00/00&nbsp;&nbsp;<i class='fa fa-user-plus'></i>&nbsp;00&nbsp;&nbsp;<i class='fa fa-user-times'></i>&nbsp;00</td>
+
+				<!--<td id='army_0_lower_units'  class='table_number table_areapoint menu_info'></td>
+				<td id='army_0_middle_units' class='table_number table_areapoint menu_info'></td>
+				<td id='army_0_upper_units'  class='table_number table_areapoint menu_info'></td>
+				<td colspan='2' id='army_0_create_units' class='table_number table_areapoint menu_info'></td>
+				<td colspan='1' id='army_0_lost_units'   class='table_number table_areapoint menu_info'></td>-->
+			</tr>
+			<tr id='army_1' style=''>
+				<td id='army_1_name'                   class='table_string  menu_info'><i class="fa fa-flag"></i></td>
+				<td id='army_1_sum_hitpoint'           class='table_number  menu_info'><i class='fa fa-heart'></i>&nbsp;0000</td>
+				<td colspan='1' id='army_1_area_point' class='table_number  menu_info'><i class='fa fa-university'></i>&nbsp;0000</td>
+				<td id='army_1_castle'                 class='table_number  menu_info'><i class='fa fa-fort-awesome'></i>&nbsp;00</td>
+				<td id='army_1_level_up'                 class='table_number  menu_info'><i class="fa fa-level-up" ></i>&nbsp;0</td>
+
+				<td colspan='3' id='army_1_units'      class='table_string  menu_info'><i class='fa fa-users'></i>&nbsp;00/00/00&nbsp;&nbsp;<i class='fa fa-user-plus'></i>&nbsp;00&nbsp;&nbsp;<i class='fa fa-user-times'></i>&nbsp;00</td>
+
+				<!--<td id='army_1_lower_units'  class='table_number table_areapoint menu_info'></td>
+				<td id='army_1_middle_units' class='table_number table_areapoint menu_info'></td>
+				<td id='army_1_upper_units'  class='table_number table_areapoint menu_info'></td>
+				<td colspan='2' id='army_1_create_units' class='table_number table_areapoint menu_info'></td>
+				<td colspan='1' id='army_1_lost_units'   class='table_number table_areapoint menu_info'></td>-->
+			</tr>
+		</table>
+	</div>
+
+	<div>
+		<table id='button_table' style='display:none;table-layout: fixed;'>
+			<tr>
+				<td id='td_cancel'  class='table_cancel'>
+					<button id='button_cancel' onClick='gg.controller_user.cancel()' class='leftsidebutton white' disabled><i class="fa fa-times"></i></button>
+				</td>
+				<td id='td_dialog' text-align="center"  class='table_ok'>
+					<button id='button_dialog' onClick='gg.controller_user.dialog()' class='leftsidebutton white' disabled><i class="fa fa-info"></i></button>
+				</td>
+				<td id='td_menu'  class='table_menu'>
+					<button id='button_menu' onClick='gg.controller_user.menu()' class='leftsidebutton white' disabled><i class="fa fa-cog"></i></button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+<!--<span id='check'></span><br>-->
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+	    function initApp2() {
+			var ratio = gg.menu.set_game_view();
+			gg.init_load(ratio);
+
+	    }
+
+        window.onload = function(){
+	        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+	            document.addEventListener('deviceready', initApp2, false);
+	        } else {
+	            initApp2();
+	        }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<!-- <script src="cordova.js"></script> -->
+
+    <script src="js/gg_data.js"></script>
+	<script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+	<script src="js/gg_menu_before.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <script src="js/gg_storage.js"></script>
+	    
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			<span id='menu_result' >&nbsp;</>
+		</div>
+		<div>
+		<table id='info' style='display:none;'>
+			<tr>
+				<td><span class='menu_string' id='menu_mode'>&nbsp;</span></td>
+				<td colspan='5'><span class='menu_string' id='game_mode'></span></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_game_time'>&nbsp;</span></td>
+<!--				<td>
+					<span class='menu_string' id='hitpoint_0'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='hitpoint_1'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='hitpoint_2'><i class="fa fa-trophy"></i></span>
+				</td> -->
+				<td>
+<div id='div_hitpoint_0' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='hitpoint_0' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+				</td>
+				<td>
+<div id='div_hitpoint_1' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='hitpoint_1' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+				</td>
+				<td>
+<div id='div_hitpoint_2' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='hitpoint_2' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_map'>&nbsp;</span></td>
+<!--				<td>
+					<span class='menu_string' id='map_0'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='map_1'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='map_2'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='map_3'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='map_4'><i class="fa fa-trophy"></i></span>
+				</td>-->
+				<td>
+<div id='div_map_0' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='map_0' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_map_1' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='map_1' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_map_2' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='map_2' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_map_3' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='map_3' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_map_4' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='map_4' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_unit_number'>&nbsp;</span></td>
+<!--				<td>
+					<span class='menu_string' id='unit_number_0'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='unit_number_1'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='unit_number_2'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='unit_number_3'><i class="fa fa-trophy"></i></span>
+				</td>-->
+				<td>
+<div id='div_unit_number_0' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='unit_number_0' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_unit_number_1' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='unit_number_1' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_unit_number_2' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='unit_number_2' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_unit_number_3' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='unit_number_3' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td rowspan='2'><span class='menu_string' id='menu_team'>&nbsp;</span></td>
+<!--				<td>
+					<span class='menu_string' id='team_0'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_1'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_2'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_3'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_4'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_5'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_6'><i class="fa fa-trophy"></i></span>
+					<span class='menu_string' id='team_7'><i class="fa fa-trophy"></i></span>
+				</td>-->
+				<td>
+<div id='div_team_0' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_0' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_team_1' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_1' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_team_2' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_2' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_team_3' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_3' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+<div id='div_team_4' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_4' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_team_5' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_5' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_team_6' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='team_6' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+</div>
+					
+				</td>
+				<td>
+					</td>
+			</tr>
+			<!-- Enemy Team -->
+			<tr>
+				<td rowspan='2'><span class='menu_string' id='menu_enemy_team'>&nbsp;</span></td>
+				<td>
+<div id='div_enemy_team_0' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_0' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_enemy_team_1' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_1' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_enemy_team_2' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_2' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_enemy_team_3' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_3' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+<div id='div_enemy_team_4' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_4' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_enemy_team_5' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_5' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+<div id='div_enemy_team_6' style='position:relative;height:240px; width:240px;overflow: hidden;zoom:20%;'>
+<img id='enemy_team_6' src='img/0240/medal_0240.png' style='clip:rect(0px 240px 240px 0px);position: absolute;left:0px;' >
+</div>
+					
+				</td>
+				<td>
+</div>
+					
+				</td>
+				<td>
+					</td>
+			</tr>
+			
+		</table>
+
+		
+		</div>
+		<div>
+			<button id='prev' class='menubutton white' onclick='gg.menu.next_result();' style='displat:none;'><i class="fa fa-arrow-circle-o-right"></i></button><br />
+			<button id='back' class='menubutton white' onclick='gg.menu.prev_result();' style='displat:none;'><i class="fa fa-arrow-circle-o-left"></i></button><br />
+			<button id='return' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style='displat:none;'><i class="fa fa-sign-out"></i></button><br />
+		</div>
+
+	</div>
+
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			var ratio = gg.menu.ratio_cal();
+			gg.menu.set_result(0);
+			gg.menu.beofre_menu_result();
+		};
+    </script>
+</body>
+</html>

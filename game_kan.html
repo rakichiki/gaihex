@@ -1,0 +1,271 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+		
+    <!-- <script src="cordova.js"></script> -->
+    <script src="js/gg_data.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_main_sub.js"></script>
+    <script src="js/gg_main_sub2.js"></script>
+    <script src="js/gg_controller.js"></script>
+    <script src="js/gg_controller_sub.js"></script>
+    <script src="js/gg_controller_cpu.js"></script>
+    <script src="js/gg_view.js"></script>
+    <script src="js/gg_animation.js"></script>
+    <script src="js/gg_animation_etc.js"></script>
+    <script src="js/gg_animation_sub.js"></script>
+    <script src="js/gg_parts.js"></script>
+    <script src="js/gg_data_route.js"></script>	
+    <!--<script src="js/gg_data_route_min.js"></script>	-->
+
+    <script src="js/gg_parts_data.js"></script>
+    <script src="js/gg_parts_attack.js"></script>
+    <script src="js/gg_parts_attack_sub.js"></script>
+    <script src="js/gg_parts_animation.js"></script>
+    <script src="js/gg_event.js"></script>
+    <script src="js/gg_controller_user.js"></script>
+    <script src="js/gg_controller_user_sub.js"></script>
+    <script src="js/gg_map.js"></script>
+    <script src="js/gg_menu.js"></script>
+    <script src="js/gg_menu_after.js"></script>
+    <script src="js/gg_graph.js"></script>
+    <script src="js/gg_storage.js"></script>
+    <!--<script src="js/gg_audio.js"></script>-->
+    <script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <!--<script src="cordova.js"></script>-->
+
+<!--    <script src="js/gs_parts_route_cal.js"></script>-->
+<style type="text/css">
+
+div#fullpage {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0px solid red;
+	text-align: center;
+	vertical-align: middle;
+}
+
+</style>
+</head>
+<body onSelectStart='return false'>
+	<div id='fullpage'>
+		<div id='canvas_div' width='542px' height='620px'>
+			<div id='div_canvas_0' style='margin:0px;padding:0px;position: relative; top: 0px; left:0px;z-index: 1;'>
+				<canvas id='canvas_0' width='640px' height='780px'></canvas>
+			</div>
+		</div>
+		<div id='destinetion' class='destinetion' style='text-align:center;'>
+			<span class='win_lost_destinetion'><button id='back_top' onClick='gg.menu.back_top()' class='leftsidebutton white' style=''><i class="fa fa-caret-square-o-left"></i></button>
+</span>
+		</div>
+	
+		<div>
+		<table id='button_table'>
+			<tr>
+				<td id='td_cancel'  class='table_cancel'>
+					<button id='button_cancel' onClick='gg.controller_user.cancel()' class='leftsidebutton white' disabled><i class="fa fa-times"></i></button>
+				</td>
+				<td id='td_dialog' text-align="center">
+					<button id='button_dialog' onClick='gg.controller_user.dialog()' class='leftsidebutton white' disabled><i class="fa fa-info"></i></button>
+				</td>
+				<td id='td_menu'  class='table_menu'>
+					<button id='button_menu' onClick='gg.controller_user.menu()' class='leftsidebutton white' disabled><i class="fa fa-cog"></i></button>
+				</td>
+			</tr>
+		</table>
+		</div>
+
+		<div　class='leftsidebutton white' style='text-align:center;'>
+		<table id='info_table' class='table_01'　style='display:inline;'>
+			<tr>
+				<td id='mode_info' class='table_string table_name menu_info'>XX</td>
+				<td id='round_info' class='table_number table_hitpoint menu_info'>XXXX</td>
+				<td id='turn_info' class='table_number table_areapoint menu_info'>XX</td>
+				<td id='end_turn' class='table_number table_unit menu_info'>XX</td>
+
+				<td id='hande_info' class='table_number table_name menu_info'>XX</td>
+				<td id='win_info' class='table_number table_hitpoint menu_info'>XXXX</td>
+				<td id='turn_start_army' class='table_number table_areapoint menu_info'><i class="fa fa-flag"></i></td>
+				<td id='win_or_lost' class='table_number table_unit menu_info'>XX</td>
+			</tr>
+			<tr id='army_1' style='display:none;'>
+				<td id='army_0_name' class='table_string table_name menu_info'><i class="fa fa-flag"></i></td>
+				<td id='army_0_sum_hitpoint' class='table_number table_hitpoint menu_info'>XXXX</td>
+				<td id='army_0_area_point' colspan="2" class='table_number table_areapoint menu_info'>XXXX</td>
+
+				<td id='army_1_name' class='table_string table_name menu_info'><i class="fa fa-flag"></i></td>
+				<td id='army_1_sum_hitpoint' class='table_number table_hitpoint menu_info'>XXXX</td>
+				<td id='army_1_area_point' colspan="2"  class='table_number table_areapoint menu_info'>XXXX</td>
+			</tr>
+			<tr id='army_2' style='display:none;'>
+				<td id='army_2_name' class='table_string table_name menu_info'></td>
+				<td id='army_2_sum_hitpoint' class='table_number table_hitpoint menu_info'></td>
+				<td id='army_2_area_point' class='table_number table_areapoint menu_info'></td>
+				<td id='army_2_next_unit' class='table_string table_unit menu_info'></td>
+
+				<td id='army_3_name' class='table_string table_name menu_info'></td>
+				<td id='army_3_sum_hitpoint' class='table_number table_hitpoint menu_info'></td>
+				<td id='army_3_area_point' class='table_number table_areapoint menu_info'></td>
+				<td id='army_3_next_unit' class='table_string table_unit menu_info'></td>
+			</tr>
+			<tr id='army_3' style='display:none;'>
+				<td id='army_4_name' class='table_string table_name menu_info'></td>
+				<td id='army_4_sum_hitpoint' class='table_number table_hitpoint menu_info'></td>
+				<td id='army_4_area_point' class='table_number table_areapoint menu_info'></td>
+				<td id='army_4_next_unit' class='table_string table_unit menu_info'></td>
+
+				<td id='army_5_name' class='table_string table_name menu_info'></td>
+				<td id='army_5_sum_hitpoint' class='table_number table_hitpoint menu_info'></td>
+				<td id='army_5_area_point' class='table_number table_areapoint menu_info'></td>
+				<td id='army_5_next_unit' class='table_stringt able_unit menu_info'></td>
+			</tr>
+		</table>
+
+		</div>
+<span id='check'></span><br>
+    <script>
+		gg.menu.set_back_ground_image();
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+
+	    function initApp() {
+			//if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+			if (AdMob == null) { 
+				return; 
+			}
+			var admobid = {};
+			if( /(android)/i.test(navigator.userAgent) ) { 
+				admobid = { // for Android
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+				admobid = { // for iOS
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			} else {
+				admobid = { // for Windows Phone
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			}
+			//initAd();
+	        var defaultOptions = {
+	            // bannerId: admobid.banner,
+	            // interstitialId: admobid.interstitial,
+	            adSize: 'SMART_BANNER',
+	            //adSize: 'CUSTOM',
+	            // width: integer, // valid when set adSize 'CUSTOM'
+	            // height: integer, // valid when set adSize 'CUSTOM'
+	            position: AdMob.AD_POSITION.BOTTOM_CENTER,
+	            // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
+	            bgColor: 'black', // color name, or '#RRGGBB'
+	            // x: integer,		// valid when set position to 0 / POS_XY
+	            // y: integer,		// valid when set position to 0 / POS_XY
+				//x: 0,
+	            //y: 100,		// valid when set position to 0 / POS_XY
+	            //isTesting: true, // set to true, to receiving test ad for testing purpose
+	            // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
+	        };
+	        AdMob.setOptions( defaultOptions );
+			document.addEventListener('onAdLoaded', initGame);
+	        // display the banner at startup
+	        AdMob.createBanner( {adId:admobid.banner, overlap: true, 
+								 offsetTopBar: false, 
+								//adSize: "SMART_BANNER", 
+								} );
+								//position: 4} );
+	    }
+	    function initGame() {
+
+			
+			var hight = 173;
+			//var str_hight = 30;
+			//var ratio;
+			//var start_x = 0;
+			var size_default = 151;
+			var a = document.getElementById('check');
+			//a.innerHTML = 'devicePixelRatio:' + window.devicePixelRatio;
+			a.innerHTML += 'innerWidth:' + window.innerWidth;
+			a.innerHTML += ' ' + window.innerWidth * window.devicePixelRatio;
+			var ratio = gg.menu.ratio_cal();
+			a.innerHTML += ' ratio:' + ratio;
+			//a.innerHTML += ' xsize:' + size_default * ratio;
+			var x_size_diff = Math.floor((window.innerWidth - size_default * ratio / window.devicePixelRatio) / 2);
+			//a.innerHTML += ' window.innerWidth:' + window.innerWidth;
+			//a.innerHTML += ' size_default:' + size_default;
+			//a.innerHTML += ' ratio:' + ratio;
+			//a.innerHTML += ' x_size_diff:' + x_size_diff;
+			
+			document.getElementById('div_canvas_0').style.marginLeft = x_size_diff + 'px';
+			
+			//start_x = Math.floor((window.devicePixelRatio * window.innerWidth - size_default * ratio) / 2);
+			//start_x = 0;
+			element = document.getElementById('canvas_0'); //.innerHTML = window.devicePixelRatio;
+			element.width = ratio * size_default;
+			element.height = ratio * hight;
+			element.style.width = (ratio * size_default / window.devicePixelRatio) + 'px';
+			element.style.height = ((ratio * hight) / window.devicePixelRatio) + 'px';
+			
+			gg.menu.set_canvas(((ratio * hight) / window.devicePixelRatio), ratio * size_default);
+			
+			
+			var dialog = document.getElementById('destinetion');
+			dialog.style.top = ((ratio * hight) / window.devicePixelRatio) / 4;
+			
+			var width_bin = window.innerWidth - button_cancel.clientWidth -
+			               button_dialog.clientWidth - button_menu.clientWidth;
+
+			
+			var table_element = document.getElementById('button_table');
+			table_element.width = ratio * size_default / window.devicePixelRatio;
+			table_element.style.marginLeft = x_size_diff + 'px';
+			
+			var info_table = document.getElementById('info_table');
+			info_table.style.marginLeft = Math.floor((window.innerWidth - info_table.clientWidth) / 2);
+			
+			gg.event.set_pixel_ratio(window.devicePixelRatio, x_size_diff);
+			gg.view.set_pixel_ratio(ratio, 0);
+			
+			var temp_url = location.search.replace(/\?/,'').split(/&/);
+			var parameter = {};
+			for (var i = 0, len_max = temp_url.length; i < len_max; i++) {
+			    var temp_word = temp_url[i].split('=');
+			    parameter[temp_word[0]] = temp_word[1];
+			}
+			
+			var team = [GG_DATA_ARMY_COLOR_ALPHABET[parameter.friend],
+			            GG_DATA_ARMY_COLOR_ALPHABET[parameter.enemy]];
+			gg.init_load(ratio);
+
+		}
+		var element;
+        window.onload = function(){
+
+	        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+	            document.addEventListener('deviceready', initApp, false);
+	        } else {
+	            initApp();
+	        }
+        }
+    </script>
+	</div>
+</body>
+</html>

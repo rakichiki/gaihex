@@ -1,0 +1,118 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <!--<script src="cordova.js"></script>-->
+		
+    <script src="js/gg_data.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+    <script src="js/gg_menu_animation.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <!--<script src="js/gg_fadeout.js"></script>-->
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			GaiHex
+		</div>
+		<div id='div_unit' style='position:relative;height:96px; width:96px;overflow: hidden;'>
+			<img id='unit' src='' style='position: absolute;' >
+		</div>
+	</div>
+    <span id='check'></span><br>
+
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+        window.onload = function(){
+	        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+	            document.addEventListener('deviceready', initApp2, false);
+	        } else {
+	            initApp2();
+	        }
+        }
+		function initApp2() {
+
+			//if (AdMob == null) { 
+			//if (AdMob == undefine) { 
+			gg.menu_animation.animation_start();
+			return; 
+			//}
+			var admobid = {};
+			if( /(android)/i.test(navigator.userAgent) ) { 
+				admobid = { // for Android
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+				admobid = { // for iOS
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			} else {
+				admobid = { // for Windows Phone
+					banner: 'ca-app-pub-5194573515833796/5311102060',
+				};
+			}
+	        var defaultOptions = {
+	            // bannerId: admobid.banner,
+	            // interstitialId: admobid.interstitial,
+	            adSize: 'SMART_BANNER',
+	        //    //adSize: 'CUSTOM',
+	        //    // width: integer, // valid when set adSize 'CUSTOM'
+	        //    // height: integer, // valid when set adSize 'CUSTOM'
+	            position: AdMob.AD_POSITION.BOTTOM_CENTER,
+	            // offsetTopBar: false, // avoid overlapped by status bar, for iOS7+
+	            bgColor: 'black', // color name, or '#RRGGBB'
+	        //    // x: integer,		// valid when set position to 0 / POS_XY
+	        //    // y: integer,		// valid when set position to 0 / POS_XY
+			//	//x: 0,
+	        //    //y: 100,		// valid when set position to 0 / POS_XY
+	        //    //isTesting: true, // set to true, to receiving test ad for testing purpose
+	        //    // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
+	        };
+	        AdMob.setOptions( defaultOptions );
+
+	        //// display the banner at startup
+	        AdMob.createBanner( {adId:admobid.banner, overlap: true, 
+								 offsetTopBar: false, 
+								//adSize: "SMART_BANNER", 
+								} );
+								//position: 4} );
+			gg.menu_animation.animation_start();
+		}
+
+		//window.onload = function(){
+			//gg.menu.get_lang();
+		//	gg.menu_animation.animation_start();
+			//var list = ['oneonone', 'campaign', 
+			//            'tower_defence', 'benchmark', 'man', 'result',
+			//			'info', 'setting'];
+			//var elemnt;
+			//for (var i = 0; i < list.length; i++) {
+			//	elemnt = document.getElementById(list[i]);
+			//	elemnt.style.display = 'inline';
+			//	elemnt.style.marginLeft = (window.innerWidth - elemnt.clientWidth) / 2;
+			//}
+
+		//};
+    </script>
+</body>
+</html>

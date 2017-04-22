@@ -1,0 +1,104 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- <script src="cordova.js"></script> -->
+
+    <script src="js/gg_data.js"></script>
+	<script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+	<script src="js/gg_menu_before.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <script src="js/gg_storage.js"></script>
+	    
+</head>
+<body onSelectStart='return false' >
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			<span id='menu_setting'>&nbsp;</>
+		</div>
+		<table id='info' style='display:inline;'>
+			<tr>
+				<td><span class='menu_string' id='menu_speed'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='speed_decrease' onclick='gg.menu.change_parameter("speed",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='speed' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='speed_increase' onclick='gg.menu.change_parameter("speed",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_audio'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='audio_decrease' onclick='gg.menu.change_parameter("audio",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='audio' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='audio_increase' onclick='gg.menu.change_parameter("audio",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_dialog'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='dialog_decrease' onclick='gg.menu.change_parameter("dialog",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='dialog' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='dialog_increase' onclick='gg.menu.change_parameter("dialog",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_view_hitpoint'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='view_hitpoint_decrease' onclick='gg.menu.change_parameter("view_hitpoiny",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='view_hitpoint' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='view_hitpoint_increase' onclick='gg.menu.change_parameter("view_hitpoiny",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_view_level'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='view_level_decrease' onclick='gg.menu.change_parameter("view_level",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='view_level' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='view_level_increase' onclick='gg.menu.change_parameter("view_level",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_cancel_pattern'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='cancel_pattern_decrease' onclick='gg.menu.change_parameter("cancel_pattern",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'><span id='cancel_pattern' class='menu_string'></span></td>
+				<td><button class='directionbutton white' id='cancel_pattern_increase' onclick='gg.menu.change_parameter("cancel_pattern",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+
+		</table>
+
+		<p>
+		<button id='back' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style=''><i class="fa fa-arrow-circle-o-left"></i></button><br />
+		</p>
+	</div>
+
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			var ratio = gg.menu.ratio_cal();
+			//var list = ['info', 'back'];
+			//var elemnt;
+			//for (var i = 0; i < list.length; i++) {
+			//	elemnt = document.getElementById(list[i]);
+			//	elemnt.style.display = 'inline';
+			//	elemnt.style.marginLeft = (window.innerWidth - elemnt.clientWidth) / 2;
+			//}
+			//gg.menu.init_speed();
+			gg.menu.beofre_menu_setting();
+			
+
+		};
+    </script>
+</body>
+</html>

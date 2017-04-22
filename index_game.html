@@ -1,0 +1,79 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- <script src="cordova.js"></script> -->
+    <script src="js/gg_data.js"></script>
+    <script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+    <script src="js/gg_menu_before.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <script src="js/gg_menu_animation.js"></script>
+	    
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;z-index:1;'>
+		<div class='menu_top'>
+			GaiHex
+		</div>
+		<button id='oneonone' class='menubutton white' onclick='location.href = "./menu_option.html?mode=oneonone";' style=''><span id='normal_game' /></button><br />
+		<button id='campaign' class='menubutton white' onclick='location.href = "./menu_start.html?mode=campaign";' style=''><span id='campaign_game'></button><br />
+		<button id='tower_defence' class='menubutton white' onclick='location.href = "./menu_option.html?mode=defence";' style=''><span id='many_enemy' /></button><br />
+		<button id='giant_killing' class='menubutton white' onclick='location.href = "./menu_option.html?mode=giant";' style=''><span id='stroge_enemy' /></button><br />
+		<button id='team' class='menubutton white' onclick='location.href = "./menu_start.html?mode=team";' style=''><span id='team_game' /></button><br />
+		<br />
+		<br />
+		<button id='setting' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style=''><i class="fa fa-cogs"></i></button><br />
+	</div>
+	<div id='animation_0' style='position:fixed;top:0px;left:0px;z-index:0;height:240px; width:240px;'>
+		<img id='img_animation_0' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_1' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_1' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_2' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_2' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_3' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_3' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_4' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_4' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_5' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_5' src='' style='position: absolute;'>
+	</div>
+	<div id='animation_6' style='position:fixed;top:0px;left:0px;z-index:0;height:96px; width:96px;'>
+		<img id='img_animation_6' src='' style='position: absolute;'>
+	</div>
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			gg.menu.beofre_index_game();
+			//gg.menu_animation.set_home_animation();
+
+		};
+    </script>
+</body>
+</html>

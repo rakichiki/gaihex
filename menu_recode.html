@@ -1,0 +1,234 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<!-- <script src="cordova.js"></script> -->
+
+    <script src="js/gg_data.js"></script>
+	<script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+	<script src="js/gg_menu_before.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <script src="js/gg_menu_view.js"></script>
+    <script src="js/gg_storage.js"></script>
+	    
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			<span id='menu_recode' >&nbsp;</>
+		</div>
+		<div>
+		<table id='info' style='display:none;'>
+			<tbody>
+			<tr>
+				<td><span class='menu_string' id='menu_mode'>&nbsp;</span>
+				</td>
+				<td colspan="3"><span class='menu_string' id='game_mode'>&nbsp;</span>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td><span class='menu_string' id='menu_recode_win'>&nbsp;</span>
+				</td>
+				<td><span class='menu_string' id='menu_recode_game'>&nbsp;</span>
+				</td>
+				<td><span class='menu_string' id='menu_recode_percentage'>&nbsp;</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_hande_0'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_hande_0'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_hande_0'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_hande_0'>&nbsp;</span>
+				</td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_hande_1'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_hande_1'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_hande_1'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_hande_1'>&nbsp;</span>
+				</td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_hande_2'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_hande_2'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_hande_2'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_hande_2'>&nbsp;</span>
+				</td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_hande_3'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_hande_3'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_hande_3'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_hande_3'>&nbsp;</span>
+				</td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_hande_4'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_hande_4'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_hande_4'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_hande_4'>&nbsp;</span>
+				</td>
+			</tr>
+
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_0'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_0'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_0'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_0'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_1'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_1'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_1'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_1'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_2'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_2'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_2'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_2'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_3'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_3'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_3'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_3'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_4'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_4'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_4'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_4'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_5'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_5'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_5'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_5'>&nbsp;</span>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_6'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_6'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_6'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_6'>&nbsp;</span>
+				</td>
+			</tr>
+			<!--
+			<tr>
+				<td><span class='menu_string' id='menu_recode_item_team_7'><i class="fa fa-flag"></i></span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_win_team_7'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_game_team_7'>&nbsp;</span>
+				</td>
+				<td class='table_number'><span class='menu_string' id='menu_recode_percentage_team_7'>&nbsp;</span>
+				</td>
+			</tr>
+			-->
+			<!--<tr>
+				<td><span class='menu_string' id='menu_recode_item_total'><i class="fa fa-flag"></i></span>
+				</td>
+				<td><span class='menu_string' id='menu_recode_win_total'>&nbsp;</span>
+				</td>
+				<td><span class='menu_string' id='menu_recode_game_total'>&nbsp;</span>
+				</td>
+				<td><span class='menu_string' id='menu_recode_percentage_total'>&nbsp;</span>
+				</td>
+			</tr>-->
+			
+			</tbody>
+		</table>
+
+		
+		</div>
+		<div>
+			<button id='prev' class='menubutton white' onclick='gg.menu.next_recode(1);' style='displat:none;'><i class="fa fa-arrow-circle-o-right"></i></button><br />
+			<button id='back' class='menubutton white' onclick='gg.menu.next_recode(-1);' style='displat:none;'><i class="fa fa-arrow-circle-o-left"></i></button><br />
+			<button id='return' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style='displat:none;'><i class="fa fa-sign-out"></i></button><br />
+		</div>
+
+	</div>
+
+		 
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			gg.menu.set_recode_view();
+			//var ratio = gg.menu.ratio_cal();
+			gg.menu.set_recode(0);
+			//gg.menu.beofre_menu_result();
+		};
+    </script>
+</body>
+</html>

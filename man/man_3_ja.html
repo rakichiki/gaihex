@@ -1,0 +1,1841 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+
+
+<title>GaiHexマニュアル</title>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/man.css">
+    <script src="../cordova.js"></script>
+<script>
+	var GG_MAN_NEXT = 0;
+	var GG_MAN_PREV = 1;
+	function go_page(option) {
+		var url = location.href;
+		var next_url;
+		if (url.indexOf('man_1') > 0) {
+			if (option == GG_MAN_PREV) {
+				next_url = url.replace( /man_1/g, 'man_3') ;
+			} else if (option == GG_MAN_NEXT) {
+				next_url = url.replace( /man_1/g, 'man_2') ;
+			}
+		} else if (url.indexOf('man_2') > 0) {
+			if (option == GG_MAN_PREV) {
+				next_url = url.replace( /man_2/g, 'man_1') ;
+			} else if (option == GG_MAN_NEXT) {
+				next_url = url.replace( /man_2/g, 'man_3') ;
+			}
+		} else if (url.indexOf('man_3') > 0) {
+			if (option == GG_MAN_PREV) {
+				next_url = url.replace( /man_3/g, 'man_2') ;
+			} else if (option == GG_MAN_NEXT) {
+				next_url = url.replace( /man_3/g, 'man_1') ;
+			}
+		}
+		location.href = next_url;
+	}
+
+</script>
+</head>
+<body>
+<div id="headerArea">
+    <p style='margin:0 0 0 0;'>GaiHexマニュアル 3/3<br />
+    <button id='back' class='menubutton white' onclick='go_page(GG_MAN_PREV);' style=''><i class="fa fa-arrow-circle-o-left"></i></button>
+    <button id='back' class='menubutton white' onclick='location.href = "../menu_submenu.html";' style=''><i class="fa fa-arrow-circle-o-up"></i></button>
+    <button id='back' class='menubutton white' onclick='go_page(GG_MAN_NEXT);' style=''><i class="fa fa-arrow-circle-o-right"></i></button>
+	</p>
+</div>
+<div id="contentsArea">
+<br />
+<br />
+<br />
+<br />
+<br />
+<h1>目次</h1>
+<p>
+
+4.ユニット紹介<br />
+&nbsp;4-1.下位ユニット<br />
+&nbsp;4-2.中間ユニット<br />
+&nbsp;4-3.上位ユニット<br />
+
+</p>
+
+<!-- -->
+
+
+<h1 id='c4'>4.ユニット紹介</h1>
+
+<h2 id='c4-1'>4-1.下位ユニット</h2>
+<h3>4-1-1.Ss</h3>
+<table class='table_01'>
+<tr>
+  <td class='td_left'>形状</td>
+  <td>
+<img src='../img/0240/ss_s0_0240.png' style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>共通</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+もっとも弱く、特徴もなく、見るべきポイントもありません。ありていに言えば役立たずです。ですが、成長させることで中間ユニットへ、さらに鍛えることで上位ユニットへ成長できます。無限の可能性を秘めているととらえることも可能です。ただ、そこまで辛抱強く成長させることができるかは、あなたの忍耐力が試されることでしょう。
+</p>
+
+
+<h2 id='c4-2'>4-1.中間ユニット</h2>
+<h3>4-1-2.Sw</h3>
+<table class='table_01'>
+<tr>
+  <td class='td_left'>形状</td>
+  <td>
+<img src='../img/0240/sw_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>攻撃系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+足も遅くなく防御もそこそこある本ユニットを、欠点がないのが欠点というほめているのがけなしているのかわからない評価を受けることがあります。それほど凡庸としか言葉が出てこないユニットですが、欠点がないことこそ使い勝手に反映されるものです。また、成長させれば６つのカテゴリで最も使いやすい攻撃型上位ユニットにクラスチェンジできます。本ユニットの将来を見据えて頑張って成長させてみましょう。
+</p>
+
+<h3>4-2-2.Md</h3>
+<table class='table_01'>
+<tr>
+  <td class='td_left'>形状</td>
+  <td>
+<img src='../img/0240/md_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>防御系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+本ユニットが使いやすいか、それともそうでないかはあなたの戦術方針次第です。足が遅いユニットはどうしても戦場から孤立する可能性があります。このため、１手損しても戦場に持ってくる気概がなければ本ユニットを使いこなせません。それだけ本ユニットの防御力は上位ユニットともそん色ないものですから。このため戦場の中心で耐え忍ぶ本ユニットの姿を見ることができるならば、それはあなたの勇気以外なにものでもないでしょう。
+</p>
+
+
+<h3>4-2-2.Fl</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/fl_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>移動系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+足の速さは上位ユニットとそん色ありませんが、防御力はペラペラのため下手なところに突っ込むとあっさり落ちてしまいます。このため、特徴である移動力を発揮させるケースは非常に限定されるでしょう。だからこそ本ユニットをうまく使うことができることが本ゲームの理解度を試されていると言えます。すべてのユニットに言えることですが、短所を隠し、長所を生かすことができればそれだけ勝利に近づくと言うものです。
+</p>
+<h3>4-2-3.Sb</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/sb_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>遠隔系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+遠距離タイプの少し防御力があるタイプですが、足遅めです。戦線を維持できるほど防御力があるわけでもないため、本ユニットを前に出すことは獰猛な肉食動物の前に餌を与えるような行為です。それだけ無謀な行為ですが、それでも前線を担わないといけない状況になっているならば、もう負け戦になっているでしょう。
+ですが、安全な後方（そんなものが存在すればいいですね）にいて、攻撃に参加するならば相当な戦力となるでしょう。成長させれば、使いやすい上位ユニットになるためできるだけ早急に成長させることをお勧めします。
+
+</p>
+
+<h3>4-2-5.Wt</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/wt_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>魔法系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+遠隔攻撃ユニットのぺらぺらの移動力がある方。上位ユニットほど強力な攻撃力もないため大活躍は見込めないと思う方もいますが、足が遅くない遠隔ユニットは戦場のどこでも顔を出すことができるためかなり重宝されるでしょう。足の速い遠隔ユニットはほぼいないため本ユニットはとても特殊な位置にいるとも言えます。このためか、莫大な攻撃力を誇る上位ユニットにクラスチェンジすることで足が遅くなることを嘆くかもしれません。まぁ、実際はそんなユーザは見たことありませんけどね。
+</p>
+
+<h3>4-2-6.Hs</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/hs_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>回復系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>小回復</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+回復系中間ユニット。攻撃後に非常に少ない量（自動回復）を回りにいる味方の１ユニットを回復されます。その回復量は微々たるものですが、それが戦場の勝敗の分かれ目になる可能性もあるため、軽視してはいけません。また、成長させることで莫大な量を回復できる上位ユニットにクラスチェンジすることで、陣営に勝利をもたらすことがあるため本ユニットの成長に手を抜けません。今だけを考えるのではなく、長期的ビジョンで成長させましょう。
+</p>
+
+
+
+
+<h2 id='c4-3'>4-3.上位ユニット</h2>
+<h3>4-3-1.Ax</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/ax_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>攻撃系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Axパターン</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+上位ユニットの近接タイプで最も攻撃力があるユニットが本ユニットです。複数ユニット攻撃できる数少ないユニットのため、アタッカーとしての主役を担うことになります。防御ポイントが水準以上のため、戦線を維持するための主役になること間違いありません。ただ、攻撃時に味方を巻き込んで攻撃したり、疲労がたまりやすいのが唯一の欠点です。戦線の主役か、それとも置物なるかは使いこなすあなた次第です。
+</p>
+<h3>4-3-2.Sp</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/sp_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>攻撃系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Spパターン</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+防御ポイントは前線を維持するには十分で、さらに攻撃時に攻撃対象のもう一つ奥のユニットも攻撃ターゲットにする本ユニットは、遠距離タイプの天敵と言える存在です。本ユニットに対するには、１枚程度の壁ならば気休めにもなりません。ただ、敵・味方関係なく攻撃に巻き込んでしまったり、疲労がたまりやすいのは残念ながらAxと同様です。前線の厄介者か、敵が恐れるアタッカーになるかは、あなたの腕にかかっていると言えるでしょう。
+</p>
+
+<h3>4-3-3.Sr</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/sr_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>攻撃系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Srパターン</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>12</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+攻撃対象を２回攻撃する本ユニットは、敵・味方ともに最も恐怖を感じるユニットの１つです。本ユニットのターゲットになればヒットポイントがグリーンを保持していてもレッドゾーンを突き抜け一気にデッドラインを超えることもあるのですから。この恐怖は何事にも代えることができないでしょう。ですが、敵を殲滅できなければ代わりに疲労で身動きが取れない本ユニットは、腹を空かした敵ユニットの前にデザートを置いているかのような状況です。それぐらい薄ぺっらい防御ポイントでは前線を維持するのは困難なことでしょうから、本ユニットを使いづらいユニットの１つに落ちぶれる可能性も秘めています。
+
+</p>
+
+
+
+<h3>4-3-4.Sh</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/sh_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>防御系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>カバー</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>12</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>15</td>
+</tr>
+
+</table>
+<p>
+味方が受けるダメージを肩代わりしてくれる能力は、本ユニットこそタンクの中のタンクと言えます。また、高い防御ポイントのおかげで生存率も高いため、ヒットポイントをマネージメントする煩わしさかも解放されて使いやすいユニットと考えるユーザも少なくないでしょう。ただ、本ユニット最大の欠点となる低い移動ポイントは、主戦場に間に合わず役立たずを演じざるを得ない可能性もあります。戦略眼がなければ本ユニットを宝を持ち腐れとなってしまうでしょう。
+</p>
+<h3>4-3-5.Tr</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/tr_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>防御系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>味方引き込む</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>15</td>
+</tr>
+
+</table>
+<p>
+本ユニットは、接している味方が攻撃を受け且つ反対側に逃げる場所がある場合は、その味方を引っ張って空いているところに逃がすことができます。この能力によって味方のダメージを無くすことができます。これは敵の一手を無にすることを意味するほど大きいことです。それほど強力な能力ですが、維持してきた戦線にほころびを生じさせる諸刃の剣と言えなくもないのですが...また、うまくやれば疲労がたまっている味方を川に引っ張ることも可能です。使い方次第で大きく戦局を変えることができますが、失敗すれば戦犯にもなりうる存在です。
+</p>
+<h3>4-3-6.Hm</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/hm_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>防御系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>敵を押す</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+</table>
+<p>
+本ユニットを戦場の混乱を呼び込むトリックスターと表現するのは決して大げさなことでないでしょう。それほど本ユニットの特殊な防御タイプである攻撃されたときに敵をプッシュしてどこかに誤爆させる能力は、効果があるのかないのか判別が非常に難しいものです。うまくいけば味方の攻撃をキャンセルさせることができますが、最悪は目も当てられない状況に陥る可能性も捨てきれません。またこのような些細な罠に引っかかってくれる残念な敵がどれほどいるかも疑問です。本ユニットが十全に能力を発揮できるケースは良い戦いなのか、それとも残念な戦いなのか評価は難しいと言わざるを得ません
+</p>
+
+<h3>4-3-7.Rp</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/rp_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>移動系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>敵スルー</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>反撃</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>12</td>
+</tr>
+
+</table>
+<p>
+高い移動ポイントで戦場駆け巡る本ユニットは戦場の狭さを痛感されることでしょう。また移動ポイントの高さは、突撃攻撃を行う範囲を広げることもでき、攻撃側から言えば便利この上ないユニットです。また唯一の欠点である防御ポイントの低さは、反撃によるダメージを考慮に入れると敵側からすれば攻撃することを躊躇せざるを得ません。さらに、敵をスルーする移動パターンは敵の後方に簡単に移動し、防御ポイントが薄いユニットを狩ることができます。敵からすれば厄介この上ないユニットの１つと言えます。
+</p>
+<h3>4-3-8.Kt</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/kt_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>移動系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>敵スルー</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>避ける</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>15</td>
+</tr>
+
+</table>
+<p>
+高い移動ポイントで本ユニットは、敵の奥深く進行できます。このため、後方に控える薄い衣しかまとえない遠距離・魔法系ユニットにとっては本ユニットは天敵以外なにものでもありません。また、味方のいない敵陣のまっただ中に突入するのは通常は無謀な行為ですが、攻撃を無条件に回避する防御特殊能力によって生存率は決して低くありません。このため仕留めるのが最も困難なユニットが本ユニットです。
+</p>
+
+<h3>4-3-9.Cr</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/kt_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>移動系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>敵スルー</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>攻撃力低下</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>6</td>
+</tr>
+
+</table>
+<p>
+足が長い本ユニットは戦場を所狭しと走り回ることによって戦闘場面に活気と混乱をもたらすことになるでしょう。ですが本当に本ユニットが怖いことは攻撃したユニットの攻撃ポイントが一時期的に低下させられることです。それによってそのユニットは次に攻撃するときに目を覆いたくなる結果を訪れるでしょう。このため、本ユニットを率先して攻撃したいユニットはいません。だからと言って野放しにできないところが本ユニットのいやらしいところです。本ユニットが敵に回したくないユニットトップ３に入っても驚く要素は微塵もありません。
+
+</p>
+
+<h3>4-3-10.Ch</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/ch_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>遠隔系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>遠隔</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>攻撃前に敵を引き込む</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>10</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+攻撃時に敵を手前に引き寄せてから攻撃します。川の向こう岸の敵を引き寄せられて川に引きずり高い位置から攻撃できるため、移動が大きく阻害される川マップでは本ユニットの大活躍は約束されたと言っても過言ではありません。また、川手前から遠距離攻撃しても本ユニットは防御力も高いためそう簡単に倒されることもありません。さらに、高い位置にいて位置的メリットを貪っているユニットに対しても地形的有利を解消する手立てもできます。本ユニットの前では地形的メリットを享受できないことを学んだ頃には手遅れになっているかもしれません。
+</p>
+
+<h3>4-3-11.Lb</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/lb_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>遠隔系</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>遠隔</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>攻撃後に敵プッシュ</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方プッシュ</td>
+</tr>
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+防御が薄いため、敵と接して行動することは得意としませんが、攻撃距離が３と非常に遠いところから攻撃が可能です。これで敵をアウトレンジから攻撃できます。厚い壁を作って守りに入って敵がいても、本ユニットにとっては動かない的以外何者でもありません。このため、本ユニットを本ゲームのスナイパーと語る人も少なくありません。また、攻撃後に最大３ヘックス遠ざけることができるため、足が遅いユニットは”近づいたら勝てる”と考えることは妄想しかないことを痛感することになるでしょう。
+</p>
+
+<h3>4-3-12.Hr</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/hr_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>付与系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>攻撃ポイントアップ</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方プッシュ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+本ユニットが最も有能であると明言する人は少なくありません。それほど攻撃後に味方のユニットの攻撃ポイントをアップさせる能力はチーム全体の攻撃力を大幅にアップさせることは間違いありません。ただあまりにも弱弱しいユニットのため敵の第一目標とされ、どれだけ本ユニットを優しく手当しなくてはならないことを頭を悩まされることになるでしょう。また、攻撃力アップする対象は攻撃距離と同じところにいないといけないため、チームを優先にすべきか、それとも本ユニットの攻撃ダメージを増やして成長を促すべきかは困難な問題です。この問題を解決できているころにはあなたは優秀な指揮官となっていることでしょう。
+
+</p>
+
+<h3>4-3-13.Th</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/th_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>魔法系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Thパターン</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>12</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方プッシュ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+</table>
+<p>
+敵が密集しているほど本ユニットの出番と言えます。その破壊力は、敵からは破壊の女神と恐れられ、硬直した戦線を一気に傾けることも可能なはずです。
+ただ、いいことばかりではありません。大きな攻撃範囲は、それだけ味方も巻き込む可能性を秘めていますし、接する箇所まで攻撃対象になっているため敵と接しなければならないかもしれません。このため、最大のダメージを与えようとするとどうしても敵に接するか、もしくは味方を巻き込む可能性があります。フレンドリーファイヤーって美味しいの？と言えるぐらいでなければ本ユニットをうまく使えたとは言えないでしょう。
+また、一度の攻撃で大量の疲労も受けるため次の順番が回らずゲーム終了になるかもしれません。強い武器こそ使いづらいとは本ユニットの代名詞です。
+</p>
+
+<h3>4-3-14.Wn</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/wn_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>魔法系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Wnパターン</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方プッシュ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+３番目に多くの敵にダメージを与える可能性があるユニットです。Thと違って壁を作りながら攻撃も可能できるため防御の点でも使いやすいと言えます。ただ、攻撃範囲が広いため、本当の敵は味方だと学ぶことことが起きないことを祈るばかりです。とは言え、戦況を大きく変えることができる能力を保持していることは確かです。肉を切らせて骨を断つぐらいに気概がなければ本ユニットを十全に操ることはできないでしょう。
+</p>
+
+<h3>4-3-15.Rs</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/ls_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>魔法系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>Rsパターン</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>-</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>12</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方チェンジ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+本ゲームでもっとも多くの敵を攻撃できるユニットは？と聞かれれば本ユニットと答えるのが正しい回答です。ただし、その条件を実現させるには敵の協力も必要になるでしょうけど。それぐらい本ユニットは重要ですが、その代わりに多くの欠点を保持しているのも残念なところです。特に一番大きな欠点は攻撃距離が１のところです。そうです必ず攻撃するときは敵と接しないといけません。さらに、本ユニットの防御ポイントは紙との違いを見出すのが困難なほどです。使いづらすぎて本ユニットをデザインした人を呪いたいところでしょうか。
+
+</p>
+
+<h3>4-3-16.Mc</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/mc_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>回復系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>ダメージ量回復転換</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方引っ張る</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+このユニットの恐ろしさは、敵に与えたダメージをそのまま味方を回復させるところです。このため、大きなダメージを与えた場合は、味方を一気に回復できますが、少ない場合（それこそダメージを与えられない場合！）は、Hsよりも回復させることができない場合があります。このため、うまく使えば頼もしいユニットと言えますが、あまり固くないため、前線に出すと失う可能性があります。味方を守るMcを守るという本末転倒のようなことが起きなければいいのですが。
+
+</p>
+
+<h3>4-3-17.Tk</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/tk_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>回復系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>2</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>大幅回復</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>9</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方プッシュ</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>4</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>4</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+遠隔＆大幅回復ができる重要なユニットですが、それは攻撃した後です。このため、活用するシーンは多いかもしれませんが、回復させたいユニットを簡単には回復はできないケースが多々遭遇するでしょう。また、疲労もたまりやすいため、助けに行きたいけど、間に合わなずに涙することも経験することになるでしょう。けど、うまく活用できれば味方ユニットの生存率が大幅に上がることは間違いありません。まぁ、うまく使えればの話ですが。
+</p>
+
+
+<h3>4-3-18.Ms</h3>
+<table class='table_01'>
+<tr>
+  <td>形状</td>
+  <td>
+<img src='../img/0240/ms_s0_0240.png'  style='zoom:50%;'>
+</td>
+</tr>
+<tr>
+  <td class='td_left'>カテゴリー</td>
+  <td>回復系</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃パターン</td>
+  <td>通常</td>
+</tr>
+
+
+<tr>
+  <td class='td_left'>攻撃ポイント</td>
+  <td>16</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃距離</td>
+  <td>1</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃特殊能力</td>
+  <td>複数対象小幅回復</td>
+</tr>
+<tr>
+  <td class='td_left'>攻撃疲労ポイント</td>
+  <td>3</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動パターン</td>
+  <td>味方引っ張る</td>
+</tr>
+
+<tr>
+  <td class='td_left'>移動ポイント</td>
+  <td>6</td>
+</tr>
+<tr>
+  <td class='td_left'>移動疲労ポイント</td>
+  <td>3</td>
+</tr>
+<tr>
+  <td class='td_left'>ZOCコスト</td>
+  <td>6</td>
+</tr>
+
+<tr>
+  <td class='td_left'>防御タイプ</td>
+  <td>通常</td>
+</tr>
+<tr>
+  <td class='td_left'>防御ポイント</td>
+  <td>8</td>
+</tr>
+<tr>
+  <td class='td_left'>防御特殊能力疲労ポイント</td>
+  <td>-</td>
+</tr>
+
+
+</table>
+<p>
+攻撃後に接している味方全員を小幅のヒットポイントの回復を行います。小幅回復なんて重要でないと考えるのは浅はかです。ちりも積もれば山となることを忘れてはいけません。特に本ユニットは攻撃（およびその後の回復）の疲労が少ないためMcやTkと違って次の行動までの時間が短く済むため、チームのヒットポイントの管理の主力は本ユニットになってもおかしくはありません。また小幅回復と言ってもレベルが上がることでトータルとして最も回復させることができるようになるのは本ユニットになります。本ユニットをうまく成長させた暁にはあなたは指揮官として一段と成長していることでしょう。
+<br />
+<br />
+<br /><br /><br /><br />
+</p>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- script src="cordova.js"></script> -->
+
+    <script src="js/gg_data.js"></script>
+    <script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+    <script src="js/gg_menu_before.js"></script>
+	    
+</head>
+<body onSelectStart='return false' >
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			<span id='menu_campiagn_start' />&nbsp;</span>
+		</div>
+
+		<p>
+			<button id='new' class='menubutton white'  onclick='location.href = "./menu_option.html?mode=campaign";' style=''><span id='menu_new' >&nbsp;</span></button><br />
+			<button id='load' class='menubutton white'  onclick='location.href = "./menu_load.html?mode=campaign";' style=''><span id='menu_load' >&nbsp;</span></button><br />
+			<button id='back' class='menubutton white' onclick='location.href = "./index_game.html";'' style=''><i class="fa fa-arrow-circle-o-left"></i></button><br />
+		</p>
+	</div>
+
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			//gg.menu.set_back_ground_image();
+			// mode
+			var temp_url = location.search.replace(/\?/,'').split(/&/);
+			var parameter = {};
+			for (var i = 0, len_max = temp_url.length; i < len_max; i++) {
+			    var temp_word = temp_url[i].split('=');
+			    parameter[temp_word[0]] = temp_word[1];
+			}
+			//console.dir(parameter);
+			var element = document.getElementById('new');
+			element.attributes.onclick.value = 'location.href = "./menu_option.html?mode=' + parameter['mode'] + '";'
+			var element = document.getElementById('load');
+			element.attributes.onclick.value = 'location.href = "./menu_load.html?mode=' + parameter['mode'] + '";'
+			//console.dir(element);
+			gg.menu.beofre_menu_start();
+
+			//var list = ['new', 'load', 'back'];
+			//var elemnt;
+			//for (var i = 0; i < list.length; i++) {
+			//	elemnt = document.getElementById(list[i]);
+			//	elemnt.style.display = 'inline';
+			//	elemnt.style.marginLeft = (window.innerWidth - elemnt.clientWidth) / 2;
+			//}
+
+		};
+    </script>
+</body>
+</html>

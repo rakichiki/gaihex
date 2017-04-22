@@ -1,0 +1,18 @@
+{
+  "name": "gaihex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rakichi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.6.1",
+    "electron-packager": "^8.6.0",
+    "electron-prebuilt": "^1.4.13",
+    "standard": "^10.0.1"
+  },
+  "package": "npm run bundle && electron-packager dist \"Gaihex\" --all --out=release --icon =\"icon/icon\""
+}

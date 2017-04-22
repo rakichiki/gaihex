@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- <script src="cordova.js"></script> -->
+	    
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			GaiHex
+		</div>
+		<div class='menu_div_info'>
+			GaiHex Base Rule version 1.0 <br />
+			GaiHex Expantion Rule version 1.0 <br />
+			GaiHex Computer Algorithm version 0.1 <br />
+			GaiHex View version 1.0 <br />
+			GaiHex manual version 0.9 <br />
+			<br />
+			GaiHex version 1.0 <br />
+			by rakichiki<br />
+			<br />
+			Character by K.Haruma<br />
+		</div>
+		<div>
+		<button id='back' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style=''><i class="fa fa-arrow-circle-o-left"></i></button><br />
+		</div>
+
+	</div>
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			//var ratio = gg.menu.ratio_cal();
+			//var list = ['oneonone', 'campaign', 
+			//            'tower_defence', 'benchmark', 'man', 'result',
+			//			'info', 'setting'];
+			//var elemnt;
+			//for (var i = 0; i < list.length; i++) {
+			//	elemnt = document.getElementById(list[i]);
+			//	elemnt.style.display = 'inline';
+			//	elemnt.style.marginLeft = (window.innerWidth - elemnt.clientWidth) / 2;
+			//}
+
+		};
+    </script>
+</body>
+</html>

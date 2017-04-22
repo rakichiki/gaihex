@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="no" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+        "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=460, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src *; img-src *; frame-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *;">
+
+	<link rel="shortcut icon" href="img/icon/icon_96x96.png" />
+
+	<title>GaiHex</title>
+    <link rel="stylesheet" type="text/css" href="css/gg.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- <script src="cordova.js"></script> -->
+
+    <script src="js/gg_data.js"></script>
+	<script src="js/gg_data_dict.js"></script>
+    <script src="js/gg_main.js"></script>
+    <script src="js/gg_menu.js"></script>
+	<script src="js/gg_menu_before.js"></script>
+    <script src="js/gg_menu_etc.js"></script>
+	    
+</head>
+<body onSelectStart='return false'>
+
+	<div style='text-align:center;'>
+		<div class='menu_top'>
+			<span id='menu_select_team' >&nbsp;</>
+		</div>
+		<table id='info' style='display:inline;'>
+			<tr>
+				<td style='width:40%'><span class='menu_string' id='menu_friend'>&nbsp;</span></td>
+				<td style='width:20%'><button class='directionbutton white' id='map_decrease' onclick='gg.menu.change_team("friend",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:20%'>
+					<span class='menu_string' >
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-square fa-stack-2x" style='color:rgb(150, 150, 150);'></i>
+							<i class="fa fa-flag fa-stack-1x fa-inverse" id='friend' style='color:rgb(255, 255, 255);' ></i>
+						</span>
+					</span>
+				</td>
+				<td style='width:20%'><button class='directionbutton white' id='map_increase' onclick='gg.menu.change_team("friend",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+			<tr>
+				<td><span class='menu_string' id='menu_enemy'>&nbsp;</span></td>
+				<td><button class='directionbutton white' id='map_decrease' onclick='gg.menu.change_team("enemy",-1)'><i class="fa fa-caret-left"></i></button></td>
+				<td style='width:85px'>
+					<span class='menu_string'>
+						<span class="fa-stack fa-lg">
+							<i class="fa fa-square fa-stack-2x" style='color:rgb(150, 150, 150);'></i>
+							<i class="fa fa-flag fa-stack-1x fa-inverse" id='enemy' style='color:rgb(0, 0, 0);' ></i>
+						</span>
+					</span>
+				</td>
+				<td><button class='directionbutton white' id='map_increase' onclick='gg.menu.change_team("enemy",1)'><i class="fa fa-caret-right"></i></button></td>
+			</tr>
+		</table>
+
+		<p>
+		<button id='next' class='menubutton white'  onclick='gg.menu.next_menu_team()' style=''><i class="fa fa-arrow-circle-o-right"></i></button><br />
+		<button id='back' class='menubutton white' onclick='gg.menu.prev_menu_team()' style=''><i class="fa fa-arrow-circle-o-left"></i></button><br />
+		</p>
+	</div>
+
+		
+    <script>
+
+        document.addEventListener("touchmove", touchHandler, false);
+        function touchHandler(event) {
+            event.preventDefault();
+        }
+		window.onload = function(){
+			gg.menu.beofre_menu_team();
+			//gg.menu.set_back_ground_image();
+			//var list = ['info', 'next', 'back'];
+			//var elemnt;
+			//for (var i = 0; i < list.length; i++) {
+			//	elemnt = document.getElementById(list[i]);
+			//	elemnt.style.display = 'inline';
+			//	elemnt.style.marginLeft = (window.innerWidth - elemnt.clientWidth) / 2;
+			//}
+
+		};
+    </script>
+</body>
+</html>
