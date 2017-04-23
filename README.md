@@ -30,6 +30,9 @@ GaiHexを一言でいえば、SPRGに運の要素を排除して、将棋の様�
 
 ![ゲーム画面1](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game1.png)
 
+![ゲーム画面1](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/win.png)
+
+
 ![ゲーム画面2](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game2.png)
 
 ![ゲーム画面3](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game3.png)
