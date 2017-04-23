@@ -17,10 +17,34 @@ GaiHexを一言でいえば、SPRGに運の要素を排除して、将棋の様�
 * 9つハンデを調整可能
 * 10の...（思付かない）
 
+# 動作イメージ
+
+ゲームの動作イメージは以下になります。
+
+
+![ゲームスタート](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/start.png)
+
+![メニュー](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/menu.png)
+
+![unit選択](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/unit.png)
+
+![ゲーム画面1](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game1.png)
+
+![ゲーム画面2](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game2.png)
+
+![ゲーム画面3](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game3.png)
+
+![ゲーム画面4](https://raw.githubusercontent.com/rakichiki/gaihex/master/man_image/game4.png)
+
+
+
+
+
 # マニュアル
 
 てきとうに作成したマニュアルは、トップメニューの歯車のアイコン→ブックのアイコンをクリックすると表示されます。
 
+[]()
 
 
 # ライセンス
