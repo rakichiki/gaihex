@@ -2818,6 +2818,34 @@ var GG_DATA_DICTTIONARY = {
     ,'zrušenie' // スロバキア語 sk-SK
     ,'Odpoved' // スロベニア語 sl-SI
     ]
+    //
+    ,benchmark_game: ['ベンチマーク'   
+	,'Benchmark'
+    ,'Benchmark' // ドイツ
+    ,'Benchmark' //フランス
+    ,'Benchmark' //スペイン
+    ,'Benchmark' //ポルトガル
+    ,'Benchmark' //イタリア
+    ,'Benchmark' // ポーランド
+    ,'Benchmark' //スウェーデン
+    ,'Benchmark' //フィンランド語 fi
+    ,'Benchmark' // オランダ
+    ,'Benchmark' // 台湾(繁体字)
+    ,'Benchmark' //ノルウェー
+    ,'Benchmark' // ハンガリー
+    ,'Benchmark'//ノルウェーnb             
+	,'Benchmark' //ハンガリー語hu            
+	,'Benchmark' //チェコ語cs      
+	,'Benchmark' //デンマーク語da      
+	,'Benchmark' //エストニア語et                 
+	,'Benchmark' //ギリシャ語el                                 
+	,'Benchmark' //クロアチア語hr      
+	,'Benchmark' //ラトビア語lv           
+	,'Benchmark' //リトアリア語lt           
+	,'Benchmark' //ルーマニア語ro      
+	,'Benchmark' //スロバキア語sk      
+	,'Benchmark' //スロベニア語sl    
+	]
     // 95         // <- change
     ,xxxx_xxxx: [ // <- change
      '' // ja

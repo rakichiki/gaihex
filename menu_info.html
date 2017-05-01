@@ -35,8 +35,11 @@
 			GaiHex version 1.0 <br />
 			by rakichiki<br />
 			<br />
+			<br />
 			Character by K.Haruma<br />
+			<br />
 		</div>
+		<div id='browser_version'></div>
 		<div>
 		<button id='back' class='menubutton white' onclick='location.href = "./menu_submenu.html";' style=''><i class="fa fa-arrow-circle-o-left"></i></button><br />
 		</div>
@@ -50,6 +53,9 @@
             event.preventDefault();
         }
 		window.onload = function(){
+			var browser_version = navigator.userAgent;
+			var elemnt = document.getElementById('browser_version');
+			elemnt.innerHTML = browser_version;
 			//var ratio = gg.menu.ratio_cal();
 			//var list = ['oneonone', 'campaign', 
 			//            'tower_defence', 'benchmark', 'man', 'result',

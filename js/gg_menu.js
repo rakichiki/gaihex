@@ -643,6 +643,7 @@ gg.menu.next_menu_team = function() {
     if (temp1[1] == GG_MENU_MODE_ONE_ON_ONE ||
 		temp1[1] == GG_MENU_MODE_TEAM ||
 		temp1[1] == GG_MENU_MODE_DEFENCE ||
+		//temp1[1] == GG_MENU_MODE_BENCHMARK ||
         temp1[1] == GG_MENU_MODE_GIANT_KILLING) {
         url = 'menu_unit.html?' + temp[0];
 
@@ -678,9 +679,9 @@ gg.menu.next_menu_option = function() {
     var level_up    = document.getElementById('level_up').textContent;
 
 	var options = gg.storage.load_options();
-	console.log('temp[0]:' + temp[0]);
+	//console.log('temp[0]:' + temp[0]);
     var mode = temp[0].split(/=/)[1];
-	console.log('mode:' + mode);
+	//console.log('mode:' + mode);
 	options[mode].hitpoint    = hitpoint;
 	options[mode].hande       = hande;
 	options[mode].map         = map;
@@ -1097,6 +1098,7 @@ gg.menu.start_competition = function() {
     if (parameter.mode == GG_MENU_MODE_ONE_ON_ONE ||
 		parameter.mode == GG_MENU_MODE_TEAM ||
 		parameter.mode == GG_MENU_MODE_DEFENCE ||
+		//parameter.mode == GG_MENU_MODE_BENCHMARK ||
 		parameter.mode == GG_MENU_MODE_GIANT_KILLING) {
         for (var i = 0; i < GG_DATA_CHAR_BIG_STR.length; i++) {
 			if (GG_DATA_CHAR_BIG_STR[i] == '') {

@@ -307,6 +307,14 @@ gg.view.load_count_clear = function() {
     context2.clearRect(0, 0, target2.clientWidth, target2.clientHeight);
 };
 
+
+gg.view.get_view_size = function() {
+    var target2 = document.getElementById('canvas_0');
+    var result = {width:target2.clientWidth * window.devicePixelRatio,
+                  height:target2.clientHeight * window.devicePixelRatio}
+    return result;
+};
+
 gg.view.load_count_view = function() {
     var target2 = document.getElementById('canvas_0');
     var context2 = target2.getContext('2d');
@@ -396,7 +404,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_WEAPON_DAMAGE;;
     }
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_WEAPON_DAMAGE] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_WEAPON_DAMAGE] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_WEAPON_DAMAGE] = new Audio(temp_audio_url);        
@@ -407,7 +415,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_MAGIC_DAMAGE;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_MAGIC_DAMAGE] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_MAGIC_DAMAGE] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_MAGIC_DAMAGE] = new Audio(temp_audio_url);
@@ -419,7 +427,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_RECOVERY;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_RECOVERY] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_RECOVERY] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_RECOVERY] = new Audio(temp_audio_url);
@@ -431,7 +439,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_LOST;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_LOST] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_LOST] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_LOST] = new Audio(temp_audio_url);
@@ -443,7 +451,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_CLASS_CHANGE;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_CLASS_CHANGE] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_CLASS_CHANGE] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_CLASS_CHANGE] = new Audio(temp_audio_url);
@@ -455,7 +463,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_STATUS_UP;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_STATUS_UP] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_STATUS_UP] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_STATUS_UP] = new Audio(temp_audio_url);
@@ -467,7 +475,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_FADE_IN;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_FADE_IN] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_FADE_IN] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_FADE_IN] = new Audio(temp_audio_url);
@@ -479,7 +487,7 @@ gg.view.init_start = function(map_file, unit_file,
         temp_audio_url = GG_DATA_SOUND_ANDROID_PATH + GG_DATA_SOUND_LEVEL_UP;;
     }    
     if (navigator.userAgent.indexOf('Android') >= 0) {
-        gg.view.data.audio_array[GG_DATA_SOUND_LEVEL_UP] = new Media(temp_audio_url, null);        
+        //gg.view.data.audio_array[GG_DATA_SOUND_LEVEL_UP] = new Media(temp_audio_url, null);        
 
     } else {
         gg.view.data.audio_array[GG_DATA_SOUND_LEVEL_UP] = new Audio(temp_audio_url);
@@ -652,12 +660,23 @@ gg.view.animation_view2 = function() {
     }
     if (now_date.getTime() - gg.view.data.now < timeout &&
         gg.view.data.area.count == -1) {
-        gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+        if (timeout < 1) {
+            gg.view.data.animation_timer_id = setTimeout(gg.view.animation_view2, timeout);
+        } else {
+            gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+            
+        }
         return;
     //} else if (now_date.getTime() - gg.view.data.now < timeout * 0.3 &&
     } else if (now_date.getTime() - gg.view.data.now < 10 &&
         gg.view.data.area.count > -1) {
-        gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+        if (timeout < 1) {
+            gg.view.data.animation_timer_id = setTimeout(gg.view.animation_view2, timeout);
+            //code
+        } else {
+            gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+            
+        }
         return;
     }
     // BenchMark comment out end
@@ -1893,7 +1912,8 @@ gg.view.animation_view2 = function() {
                 gg.view.data.animation_count = 0;
                 now_date = new Date();
                 gg.view.data.now = now_date.getTime();
-                gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+                //gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+                gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2, timeout);
             } else {
                 if (gg.view.data.callback != null) {
                     gg.view.data.animation_array = null;
@@ -1908,7 +1928,12 @@ gg.view.animation_view2 = function() {
     } else {
         now_date = new Date();
         gg.view.data.now = now_date.getTime();
-        gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+        if (timeout < 1) {
+            gg.view.data.animation_timer_id = setTimeout(gg.view.animation_view2, timeout);
+        } else {
+            gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.animation_view2);
+            
+        }
     }
 };
 
@@ -1967,6 +1992,7 @@ gg.view.drow_area = function() {
     } else {
         gg.view.data.now = now_date.getTime();
         gg.view.data.animation_timer_id = requestAnimationFrame(gg.view.drow_area);
+        //gg.view.data.animation_timer_id = setTimeout(gg.view.drow_area, timeout);
     }
     
 };

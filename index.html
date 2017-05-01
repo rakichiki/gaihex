@@ -45,7 +45,8 @@
         }
         window.onload = function(){
 	        if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
-	            document.addEventListener('deviceready', initApp2, false);
+	            //document.addEventListener('deviceready', initApp2, false);
+	            initApp2();
 	        } else {
 	            initApp2();
 	        }
@@ -88,13 +89,14 @@
 	        //    //isTesting: true, // set to true, to receiving test ad for testing purpose
 	        //    // autoShow: true // auto show interstitial ad when loaded, set to false if prepare/show
 	        };
-	        AdMob.setOptions( defaultOptions );
+			
+	        //AdMob.setOptions( defaultOptions );
 
 	        //// display the banner at startup
-	        AdMob.createBanner( {adId:admobid.banner, overlap: true, 
-								 offsetTopBar: false, 
-								//adSize: "SMART_BANNER", 
-								} );
+	        //AdMob.createBanner( {adId:admobid.banner, overlap: true, 
+			//					 offsetTopBar: false, 
+			//					//adSize: "SMART_BANNER", 
+			//					} );
 								//position: 4} );
 			gg.menu_animation.animation_start();
 		}

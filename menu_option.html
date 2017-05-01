@@ -130,6 +130,17 @@
 				if (options[parameter.mode].level_up != null){
 					document.getElementById('level_up').innerHTML = options[parameter.mode].level_up;				
 				}
+			} else if (parameter.mode == GG_MENU_MODE_BENCHMARK) {
+				document.getElementById('hitpoint').innerHTML    = options[parameter.mode].hitpoint;
+				document.getElementById('map').innerHTML         = options[parameter.mode].map;
+				document.getElementById('unit_number').innerHTML = options[parameter.mode].unit_number;
+				document.getElementById('hande').innerHTML       = options[parameter.mode].hande;
+				document.getElementById('unit_uniq').innerHTML   = options[parameter.mode].unit_uniq;
+				document.getElementById('lost').innerHTML        = options[parameter.mode].lost;
+				if (options[parameter.mode].level_up != null){
+					document.getElementById('level_up').innerHTML = options[parameter.mode].level_up;				
+				}
+			
 			
 			} else if (parameter.mode == GG_MENU_MODE_CAMPAIGN) {
 				document.getElementById('hitpoint').innerHTML    = options[parameter.mode].hitpoint;

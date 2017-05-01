@@ -876,6 +876,8 @@ gg.controller.view_dailog = function() {
         str += GG_DATA_DICTTIONARY.stroge_enemy[lang];
     } else if (gg.controller.data.game_info == GG_MENU_MODE_TEAM) {
         str += GG_DATA_DICTTIONARY.team[lang];
+    } else if (gg.controller.data.game_info == GG_MENU_MODE_BENCHMARK) {
+        str += GG_DATA_DICTTIONARY.benchmark_game[lang];
     }
     //+ GG_DATA_GAME_MODE_STR[gg.controller.data.game_info] +
     str += '</td>';
@@ -1681,10 +1683,12 @@ gg.controller.check_win_or_lost = function() {
     }
         
     if (win_info.result == true) {
+        
         var lang = gg.menu.get_lang();
         var page_count = gg.view.get_all_count();
         
         var end_time = new Date().getTime();
+        var game_time = end_time - gg.controller.data.start_time;
         //console.log('Time:' + (end_time - gg.controller.data.start_time) + ' Page:' + page_count + ' FPS:' + (Math.floor(page_count / ((end_time - gg.controller.data.start_time) / 1000))));
         //document.getElementById('check').innerHTML += ' time:' + (end_time - gg.controller.data.start_time);
         //document.getElementById('check').innerHTML += ' page:' + page_count;
@@ -1716,10 +1720,18 @@ gg.controller.check_win_or_lost = function() {
         message_obj.game_info = gg.controller.data.game_info;
 
         if (gg.controller.data.game_info == GG_MENU_MODE_BENCHMARK) {
+            var map_size = gg.view.get_view_size();
             message_obj.color = army[win_info.army_number].color;
             message_obj.message = [];
-            message_obj.message[0] = 'Benchmark End';
+            var time1 = Math.floor((end_time - gg.controller.data.start_time)/1000);
+            var time2 = Math.floor((end_time - gg.controller.data.start_time)/100) - time1 * 10;
+            var fps1  = (Math.floor(page_count / ((end_time - gg.controller.data.start_time) / 1000)));
+            var fps2  = (Math.floor(page_count / ((end_time - gg.controller.data.start_time) / 10000))) - fps1 * 10;
+            
+            message_obj.message[0] = GG_DATA_DICTTIONARY.benchmark_game[lang] + '<br>' + 'Size: ' + map_size.width + ' x ' + map_size.height + '<br>' + 
+                                    'Time: ' + time1 + '.' + time2 + 's<br> FPS: ' + fps1 + '.' + fps2;
             message_obj.win = true;
+
         } else if (gg.controller.data.game_info == GG_MENU_MODE_CAMPAIGN &&
                    win_info.army_number != 0 && gg.controller.data.round != 0) {
             message_obj.prev = true;

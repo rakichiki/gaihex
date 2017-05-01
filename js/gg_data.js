@@ -85,6 +85,7 @@ var GG_DATA_BACKGROUD_IMAGE = {
   ,defence:  'back_4'
   ,giant:    'back_11'
   ,team:     'back_13'
+  ,benchmark:'back_14'
 };
 
 var GG_DATA_BORN_STR = {
@@ -92,15 +93,6 @@ var GG_DATA_BORN_STR = {
   ,'create':  '生成'
   ,'deprived':'移籍'    
 };
-
-//var GG_DATA_GAME_MODE_STR = {
-//  'oneonone':  '通常対戦'
-//  ,'normal':   '通常対戦'
-//  ,'campaign': 'キャンペーン'
-//  ,'defence':  '大量敵対戦'
-//  ,'giant':    '強敵対戦'
-//  ,'team':     'チーム対戦'
-//};
 
 var GG_DATA_ZOC_PERCENT = 1;
 var GG_DATA_TEAM_ROUND  = 7;
@@ -973,6 +965,7 @@ var GG_DATA_GAME_MODE_ARRAY = [
   ,'defence'
   ,'giant'
   ,'team'
+//  ,'benchmark'
 ];
 
 var GG_DATA_TEAM_ARRAY = [
@@ -1278,8 +1271,9 @@ var GG_DATA_TIMEOUT_ANIMATION_4 = 200;
 var GG_DATA_TIMEOUT_ANIMATION_5 = 100;
 
 //var GG_DATA_ANIMATION_TIMEOUT_VERY_FAST = 15;
+var GG_DATA_ANIMATION_TIMEOUT_BENCHMARK = 0.1;
 var GG_DATA_ANIMATION_TIMEOUT_VERY_FAST = 10;
-var GG_DATA_ANIMATION_TIMEOUT_VERY_FAST = 1;
+//var GG_DATA_ANIMATION_TIMEOUT_VERY_FAST = 1;
 //var GG_DATA_ANIMATION_TIMEOUT_FAST      = 30;
 var GG_DATA_ANIMATION_TIMEOUT_FAST      = 20;
 //var GG_DATA_ANIMATION_TIMEOUT_NORMAL    = 50;

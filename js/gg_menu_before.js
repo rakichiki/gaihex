@@ -26,6 +26,8 @@ gg.menu.beofre_index_game = function() {
     element.innerHTML = GG_DATA_DICTTIONARY.stroge_enemy[lang];
     var element = document.getElementById('team');
     element.innerHTML = GG_DATA_DICTTIONARY.team_game[lang];
+    var element = document.getElementById('benchmark');
+    element.innerHTML = GG_DATA_DICTTIONARY.benchmark_game[lang];
     
 };
 

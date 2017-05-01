@@ -144,8 +144,23 @@ gg.controller_cpu.start = function(info, callback) {
 												} else {
 													if (info.map[a.y][a.x] < info.map[b.y][b.x]) {
 														return 1;
-													} else {
+													} else 	if (info.map[a.y][a.x] > info.map[b.y][b.x]) {
 														return -1;
+													} else{
+														if (a.unit_number < b.unit_number) {
+															return 1;
+														} else if (a.unit_number > b.unit_number) {
+															return -1;
+														} else {
+															if (a.attack !== undefined && b.attack !== undefined) {
+                                                                if (a.attack.unit_number < b.attack.unit_number) {
+																	return 1;
+                                                                } else {
+																	return -1;
+																}
+                                                            }
+
+														}
 													}
 												}
 											}
@@ -226,8 +241,22 @@ gg.controller_cpu.start = function(info, callback) {
 									} else {
 										if (info.map[a.y][a.x] < info.map[b.y][b.x]) {
 											return 1;
-										} else {
+										} else if (info.map[a.y][a.x] > info.map[b.y][b.x]){
 												return -1;
+										} else {
+											if (a.unit_number < b.unit_number) {
+												return 1;
+											} else if (a.unit_number > b.unit_number) {
+												return -1;
+											} else {
+												if (a.attack !== undefined && b.attack !== undefined) {
+                                                     if (a.attack.unit_number < b.attack.unit_number) {
+														return 1;
+                                                     } else {
+														return -1;
+													}
+                                                 }
+											}														
 										}
 									}
 								}

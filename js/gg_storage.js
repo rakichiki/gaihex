@@ -134,11 +134,31 @@ gg.storage.load_options = function() {
 				,lost: '1-3'
 				,level_up: 'skill'
 			}
+			,benchmark: {
+				 hitpoint: '40'
+				,map: 'balance'
+				,unit_number: '10'
+				,hande: '0'
+				,unit_uniq: 'game'
+				,lost: '1-3'
+				,level_up: 'skill'
+			 }
 		};
 		localStorage.setItem(GG_STORAGE_LOCAL_STORAGE_KEY_OPTIONS, JSON.stringify(result));
 
 	} else {
 		result = JSON.parse(temp_save_data);
+		if (result.benchmark == null) {
+			result.benchmark = {
+				 hitpoint: '40'
+				,map: 'balance'
+				,unit_number: '10'
+				,hande: '0'
+				,unit_uniq: 'game'
+				,lost: '1-3'
+				,level_up: 'skill'
+			 }
+        }
 	} 
 	return result;
 };
