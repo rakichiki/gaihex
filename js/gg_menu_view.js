@@ -56,6 +56,9 @@ gg.menu.set_game_view = function() {
         temp_button_font_size = '2.9em';
         
     }
+    if (navigator.userAgent.indexOf('iPhone') > 0) {
+        temp_button_font_size = '1.6em';
+    }
     //
 
     // set 
@@ -83,13 +86,20 @@ gg.menu.set_game_view = function() {
 	table_element.style.marginRight = (x_size_diff - 50)+ 'px';
 	table_element.style.display = 'inline';
 	table_element.style.width = Math.ceil(ratio * GG_DATA_GAME_VIEW_BASE_WIDTH / window.devicePixelRatio) + 'px';
+    var td_cancel = document.getElementById('td_cancel');
+    var td_dialog = document.getElementById('td_dialog');
+    var td_menu = document.getElementById('td_menu');
+
     if (device_id == GG_DATA_DEVICE_TABLET) {
-        var td_cancel = document.getElementById('td_cancel');
         td_cancel.style.width = '185px';
-        var td_dialog = document.getElementById('td_dialog');
         td_dialog.style.width = '185px';
-        var td_menu = document.getElementById('td_menu');
         td_menu.style.width   = '185px';
+        
+    }
+    if (navigator.userAgent.indexOf('iPhone') > 0) {
+        td_cancel.style.width = '120px';
+        td_dialog.style.width = '120px';
+        td_menu.style.width   = '120px';
         
     }
 	
@@ -100,25 +110,35 @@ gg.menu.set_game_view = function() {
 	info_table.style.marginLeft  = Math.ceil((window.innerWidth - info_table.clientWidth) / 2);
 	info_table.style.marginRight = (Math.ceil((window.innerWidth - info_table.clientWidth) / 2) - 50);
 	info_table.style.display = 'inline';
+    var mode_info = document.getElementById('mode_info');
+    var unit_info = document.getElementById('unit_info');
+    var round_info = document.getElementById('round_info');
+    var turn_info = document.getElementById('turn_info');
+    var hande_info = document.getElementById('hande_info');
+    var game_long_info = document.getElementById('game_long_info');
+    var lost_info = document.getElementById('lost_info');
+    
     if (device_id == GG_DATA_DEVICE_TABLET) {
-        var mode_info = document.getElementById('mode_info');
         mode_info.style.width = '28px';
-        var unit_info = document.getElementById('unit_info');
         unit_info.style.width = '66px';
-        var round_info = document.getElementById('round_info');
         round_info.style.width = '76px';
         
-        var turn_info = document.getElementById('turn_info');
         turn_info.style.width = '104px';
         
-        var hande_info = document.getElementById('hande_info');
         hande_info.style.width = '66px';
-        var game_long_info = document.getElementById('game_long_info');
         game_long_info.style.width = '82px';
-        var lost_info = document.getElementById('lost_info');
         lost_info.style.width = '62px';
-        
     }
+    if (navigator.userAgent.indexOf('iPhone') > 0) {
+        mode_info.style.width = '10px';
+        unit_info.style.width = '30px';
+        round_info.style.width = '50px';
+        turn_info.style.width = '1000px';
+        hande_info.style.width = '40px';
+        game_long_info.style.width = '40px';
+        lost_info.style.width = '40px';
+    }
+    
     
     // set height 
 

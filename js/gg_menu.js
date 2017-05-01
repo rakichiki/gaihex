@@ -141,6 +141,9 @@ gg.menu.ratio_cal = function() {
 		ratio = 1;
 	}
 	//ratio += 1;
+	if (navigator.userAgent.indexOf('iPhone') > 0) {
+		ratio -= 1;
+	}
 	
 	var temp_url = location.search.replace(/\?/,'').split(/&/);
 	var parameter = {};
